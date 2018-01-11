@@ -34,8 +34,4 @@ public class Main extends DefaultWebMvcConfigurer {
     public static void main(String[] args) {
         TomcatApplication.run();
     }
-
-
-
-
 }

@@ -5,12 +5,6 @@
 <jsp:useBean id="rostlina"
              type="net.sevecek.zakladniwebapp.Rostlina"
              scope="request"/>
-<jsp:useBean id="nazvyCinnosti"
-             type="java.util.List<java.lang.String>"
-             scope="request"/>
-<jsp:useBean id="mapaCinnosti"
-             type="java.util.Map<java.lang.String,java.util.List<java.lang.Integer>>"
-             scope="request"/>
 <jsp:useBean id="mesice"
              type="java.util.List<java.lang.String>"
              scope="request"/>
@@ -38,18 +32,13 @@
         <p>${rostlina.popis}</p>
 
         <ul>
-            <jstl:forEach var="nazev" items="${nazvyCinnosti}">
-                <jstl:if test="${mapaCinnosti.get(nazev).size() > 0}">
+            <jstl:forEach var="nazev" items="${rostlina.mesicePodleCinnosti.keySet()}">
+                <li>${nazev}:
+                    <jstl:forEach var="mesic" items="${rostlina.mesicePodleCinnosti.get(nazev)}">
+                        ${mesice.get(mesic)} |
+                    </jstl:forEach>
 
-                    <li>${nazev}:
-                        <jstl:forEach var="mesic" items="${mapaCinnosti.get(nazev)}">
-                            ${mesice.get(mesic)} |
-                        </jstl:forEach>
-
-                    </li>
-
-
-                </jstl:if>
+                </li>
             </jstl:forEach>
         </ul>
 

@@ -14,10 +14,17 @@ public class ZahradkaPraceSDatabazi {
 
     public List<Rostlina> nactiMojeRostliny() {
 
-        return pokladacDotazu.query(
+        List<Rostlina> rostliny = pokladacDotazu.query(
                 "select rostliny.id, rostliny.nazev from zahradka join rostliny on zahradka.id_rostliny = rostliny.id",
                 BeanPropertyRowMapper.newInstance(Rostlina.class)
         );
+
+        for (Rostlina rostlina : rostliny) {
+            List<CinnostVMesici> cinnostiVMesici = nactiCinnostiVMesicichProRostlinu(rostlina.getId());
+            rostlina.nastavCinnostiVMesici(cinnostiVMesici);
+        }
+
+        return rostliny;
     }
 
     public List<Integer> nactiIdMychRostlin() {
@@ -37,11 +44,16 @@ public class ZahradkaPraceSDatabazi {
 
     public Rostlina nactiDetailRostliny(int id) {
 
-        return pokladacDotazu.queryForObject(
+        Rostlina rostlina = pokladacDotazu.queryForObject(
                 "select * from rostliny WHERE id = ?",
                 BeanPropertyRowMapper.newInstance(Rostlina.class),
                 id
         );
+
+        List<CinnostVMesici> cinnostiVMesici = nactiCinnostiVMesicichProRostlinu(id);
+        rostlina.nastavCinnostiVMesici(cinnostiVMesici);
+
+        return rostlina;
     }
 
     public void aktualizujZahradku(int[] rostliny) {
