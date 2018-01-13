@@ -17,70 +17,71 @@ This license is copied below, and is also available with a FAQ at:
 http://scripts.sil.org/OFL */
 
 
+
+
 body {
     margin: 0;
     padding: 0%;
-    background-image: url("../images/1071-210508.jpg");
-    background-color: #f5f5f5;
+    background-color: #CDDC39;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top left;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.5em; }
+
+a {
+    text-decoration: blink;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    vertical-align: middle;
+    color: #FF9800
 }
+
+
 h2, h3, h4, h5, h6, button {
     font-family: 'Poiret One', cursive;
-    font-weight: normal;
     padding: 0;
     margin: 0.5em 0;
 }
 h1 {
     font-family: 'Helvetica', cursive;
     font-weight: 200;
-    font-size: 4em;
-    color: #e3e004;
+    font-size: 3em;
+    color: #8BC34A;
     margin: 5%;
     padding: 0;
     text-align: center;
 }
 h2 {
-    font-size: 2.5em;
-    color: #000053;
+    font-size: 2.0em;
+    color: #FF9800;
     text-align: center;
     margin: 0.5em 0;
 }
 h3 {
-    font-size: 1.3em;
+    font-size: 1.4em;
     color: #7cae31;
 }
 h4 {
-    font-size: 2em;
-    color: #650065;
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: bolder;
+    color:#FF9800 ;
 }
 h5 {
-    font-size: 1.8em;
-    color: #ff8625;
+    font-size: 1.1em;
+    color:#FF9800
 }
 h6 {
     font-size: 1.6em;
-    color: #ff0088;
 }
 p{
-    color: #7cae31;
+    font-size: 1.0em;
+    color: #8BC34A;
 }
-a {
-    text-decoration: none;
-    color: crimson;
-    font-weight: bolder;
-    text-align: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    vertical-align: middle;
-}
-a:hover {
-    color: navy;
-    font-weight: bolder;
-}
+
 table {
     border-collapse: collapse;
 }
@@ -89,15 +90,18 @@ td {
     padding: 0.25em;
 }
 
-ul {
+.detail{
+    color: #FF9800;
+    
 
 }
 
-li {
+.bez_puntiku{
     list-style-type: none;
-    color: #e3e004;
 }
 
+.mesice{
+}
 .page {
     width: 60%;
     margin: 0 auto;
@@ -110,9 +114,9 @@ img {
 }
 button {
     vertical-align: middle;
-    background-color: #7cae31;
-    font-size: 1.5em;
-    padding: 3%;
+    background-color: #8BC34A;
+    font-size: 1.2em;
+    padding: 2%;
 }
 /**************** MOBILE ****************/
 

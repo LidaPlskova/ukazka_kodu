@@ -70,14 +70,7 @@ public class ZahradkaPraceSDatabazi {
 
     }
 
-    public List<String> nactiNazvyCinnosti() {
-        return pokladacDotazu.queryForList(
-                "select nazev from cinnosti;",
-                String.class
-        );
-    }
-
-    public List<CinnostVMesici> nactiCinnostiVMesicichProRostlinu(@PathVariable Integer id) {
+    public List<CinnostVMesici> nactiCinnostiVMesicichProRostlinu(Integer id) {
         return pokladacDotazu.query(
                 "select mesic, nazev as cinnost from cinnost_pro_rostlinu_v_mesici " +
                         "  join cinnosti on cinnost_pro_rostlinu_v_mesici.id_cinnosti = cinnosti.id " +

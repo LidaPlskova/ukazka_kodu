@@ -10,7 +10,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="css/styly.css">-->
+    <link rel="stylesheet" href="css/styly.css">
     <link rel="icon" href="images/favicon.png">
     <title>Seznam rostlin - Moje zahrádka</title>
 </head>
@@ -25,14 +25,14 @@
 
         <hr/>
 
-        <h1>Moje zahrádka - seznam</h1>
+        <h1>Moje zahrádka</h1>
 
-        <a href="/uprava-zahradky">Upravit zahrádku</a>
+        <h4><a href="/uprava-zahradky">Upravit zahrádku</a></h4>
 
-        <ul>
+        <ul class="bez_puntiku">
             <jstl:forEach var="rostlina" items="${rostliny}">
                 <li>
-                    <a href="/detail/${rostlina.id}">${rostlina.nazev}</a>
+                    <p><a href="/detail/${rostlina.id}">${rostlina.nazev}</a></p>
                 </li>
             </jstl:forEach>
         </ul>

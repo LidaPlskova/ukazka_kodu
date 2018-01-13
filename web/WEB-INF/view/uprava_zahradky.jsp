@@ -16,7 +16,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="css/styly.css">-->
+    <link rel="stylesheet" href="css/styly.css">
     <link rel="icon" href="images/favicon.png">
     <title>Seznam rostlin - Moje zahrádka</title>
 </head>
@@ -28,16 +28,17 @@
         </div>
         <hr/>
 
-        <h1>Upravit zahrádku</h1>
+        <h1>Zahrádka</h1>
 
         <p>Tohle je malý pomocník pro každého, kdo má zahrádku a chce mít přehled, kdy se věnovat konkrétní rostlince.</p>
 
-        <h3>Založ vlastní zahrádku a vyber si rostliny, které pěstuješ.</h3>
+        <h5>Založ nebo uprav vlastní zahrádku - zvol si rostliny, které pěstuješ.</h5>
 
         <form method="post">
             <ul>
                 <jstl:forEach items="${vsechnyRostliny}" var="rostlina">
-                    <li>
+                    <p>
+                    <li class="bez_puntiku">
                         <input type="checkbox"
                                name="rostliny"
                                value="${rostlina.id}"
@@ -45,11 +46,14 @@
                         /> ${rostlina.nazev}
 
                     </li>
+                    </p>
 
                 </jstl:forEach>
             </ul>
 
-            <button>Uložit</button>
+            <h4>
+                <button>Uložit</button>
+            </h4>
         </form>
     </div>
 </body>

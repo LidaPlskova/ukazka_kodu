@@ -14,7 +14,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="css/styly.css">-->
+    <link rel="stylesheet" href="css/styly.css">
     <link rel="icon" href="images/favicon.png">
     <title>Činnosti v měsících - Moje zahrádka</title>
 </head>
@@ -28,7 +28,7 @@
         </div>
         <hr/>
 
-        <h1>Činnosti v měsících</h1>
+        <h1>Měsíce</h1>
 
         <jstl:forEach begin="1" end="12" var="cisloMesice">
             <div>
@@ -39,10 +39,10 @@
 
                     <jstl:if test="${rostlina.cinnostiPodleMesicu.get(cisloMesice).size() > 0}">
 
-                        <h3><a href="/detail/${rostlina.id}">${rostlina.nazev}</a></h3>
+                        <h5><a href="/detail/${rostlina.id}">${rostlina.nazev}</a></h5>
 
 
-                        <ul>
+                        <p> <ul>
                             <jstl:forEach
                                     items="${rostlina.cinnostiPodleMesicu.get(cisloMesice)}"
                                     var="cinnost">
@@ -52,7 +52,7 @@
                             </jstl:forEach>
 
 
-                        </ul>
+                        </ul>  </p>
 
 
                     </jstl:if>
@@ -61,7 +61,7 @@
 
             </div>
         </jstl:forEach>
-        
+
     </div>
 </body>
 </html>

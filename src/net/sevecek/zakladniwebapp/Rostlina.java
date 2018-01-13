@@ -66,15 +66,15 @@ public class Rostlina {
             mesicePodleCinnosti.put(cinnostVMesici.getCinnost(), new ArrayList<>());
         }
 
-        for (CinnostVMesici cinnost : cinnostiVMesici) {
-            List<Integer> prihradkaCinnosti = mesicePodleCinnosti.get(cinnost.getCinnost());
-            prihradkaCinnosti.add(cinnost.getMesic());
+        for (CinnostVMesici cinnostVMesici : cinnostiVMesici) {
+            List<Integer> prihradkaCinnosti = mesicePodleCinnosti.get(cinnostVMesici.getCinnost());
+            prihradkaCinnosti.add(cinnostVMesici.getMesic());
         }
     }
 
     private void doplnCinnostiPodleMesicu(List<CinnostVMesici> cinnostiVMesici) {
 
-        Map<Integer, List<String>> cinnostiPodleMesicu = new LinkedHashMap<Integer, List<String>>();
+        cinnostiPodleMesicu = new LinkedHashMap<Integer, List<String>>();
 
         cinnostiPodleMesicu.put(1, new ArrayList<>());
         cinnostiPodleMesicu.put(2, new ArrayList<>());
@@ -92,10 +92,9 @@ public class Rostlina {
         for (CinnostVMesici cinnostVMesici : cinnostiVMesici) {
 
             int mesic = cinnostVMesici.getMesic();
-            cinnostiPodleMesicu.get(mesic).add(cinnostVMesici.getCinnost());
+            List<String> prihradkaMesicu = cinnostiPodleMesicu.get(mesic);
+            prihradkaMesicu.add(cinnostVMesici.getCinnost());
         }
-
-        setCinnostiPodleMesicu(cinnostiPodleMesicu);
     }
 
     @Override

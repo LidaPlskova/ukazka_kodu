@@ -13,10 +13,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="css/styly.css">-->
-    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="/css/styly.css">
     <title>Seznam rostlin - Moje zahrádka</title>
 </head>
+
 <body>
     <div class="page">
 
@@ -27,22 +27,26 @@
 
         <hr/>
 
-        <h1>${rostlina.nazev}</h1>
+        <h2> ${rostlina.nazev} </h2>
 
-        <p>${rostlina.popis}</p>
 
-        <ul>
-            <jstl:forEach var="nazev" items="${rostlina.mesicePodleCinnosti.keySet()}">
-                <li>${nazev}:
-                    <jstl:forEach var="mesic" items="${rostlina.mesicePodleCinnosti.get(nazev)}">
-                        ${mesice.get(mesic)} |
-                    </jstl:forEach>
+         <p> ${rostlina.popis} </p>
+
+        <ul class="detail">
+            <h5><jstl:forEach var="nazev" items="${rostlina.mesicePodleCinnosti.keySet()}">
+                <li>  ${nazev}:
+                    <ul class ="mesice">
+                        <jstl:forEach var="mesic" items="${rostlina.mesicePodleCinnosti.get(nazev)}">
+                            &nbsp; ${mesice.get(mesic)} </li>
+                        </jstl:forEach>
+                    </ul>
 
                 </li>
-            </jstl:forEach>
+            </jstl:forEach></h5>
         </ul>
 
-
     </div>
+
 </body>
+
 </html>
