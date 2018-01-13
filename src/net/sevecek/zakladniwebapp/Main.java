@@ -18,7 +18,7 @@ public class Main extends DefaultWebMvcConfigurer {
     public DataSource dataSource() throws SQLException{
         MariaDbDataSource dataSource;
         dataSource = new MariaDbDataSource();
-        dataSource.setUrl("jdbc:mysql://localhost/moje_zahradka");
+        dataSource.setUrl("jdbc:mysql://db.tomcat.cloud:3306/moje_zahradka");
         dataSource.setUser("student");
         dataSource.setPassword("password");
         return dataSource;

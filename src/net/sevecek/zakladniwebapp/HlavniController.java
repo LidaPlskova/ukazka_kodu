@@ -12,6 +12,11 @@ public class HlavniController {
     @Autowired
     private ZahradkaPraceSDatabazi praceSDatabazi;
 
+    @RequestMapping(value = {"", "/", "/index"})
+    public String presmerovatZIndexu() {
+        return "redirect:/seznam";
+    }
+
     @RequestMapping("/seznam")
     public ModelAndView seznam() {
 
