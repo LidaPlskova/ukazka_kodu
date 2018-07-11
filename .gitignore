@@ -4,3 +4,5 @@
 
 *.iml
 !/src/net/sevecek/zakladniwebapp/CinnostVMesici.java
+/lib/
+/src-boot/
