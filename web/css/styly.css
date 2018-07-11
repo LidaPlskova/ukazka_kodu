@@ -31,11 +31,16 @@ body {
 
 a {
     font-weight: bolder;
+    font-style: italic;
     text-align: center;
+
     margin-top: 10%;
     margin-bottom: 10%;
     vertical-align: middle;
     color: #FF9800
+}
+a:hover {
+    color:#8BC34A ;
 }
 
 
@@ -99,7 +104,8 @@ td {
     list-style-type: none;
 }
 
-.mesice{
+.seznam{
+    list-style-type: square;
 }
 .page {
     width: 60%;

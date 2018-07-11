@@ -29,7 +29,7 @@
 
         <h4><a href="/uprava-zahradky">Upravit zahrádku</a></h4>
 
-        <ul class="bez_puntiku">
+        <ul class="seznam">
             <jstl:forEach var="rostlina" items="${rostliny}">
                 <li>
                     <p><a href="/detail/${rostlina.id}">${rostlina.nazev}</a></p>

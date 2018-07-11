@@ -3,3 +3,4 @@
 /dist
 
 *.iml
+!/src/net/sevecek/zakladniwebapp/CinnostVMesici.java
